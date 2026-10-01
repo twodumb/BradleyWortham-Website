@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Renters — Bradley Wortham</title>
+<meta name="description" content="Search rental homes in Wichita Falls, TX, see what you need to apply, and learn your rights as a Texas tenant.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="renters">
+<div id="site-header"></div>
+
+<main>
+  <section class="page-hero photo" style="--img:url('https://images.unsplash.com/photo-1758523670991-ee93bc48d81d?w=1800&q=70&auto=format&fit=crop')">
+    <div class="wrap stack">
+      <p class="eyebrow">For renters</p>
+      <h1>Find a rental in Wichita Falls without the runaround.</h1>
+      <p class="lede">Browse the homes Wortham Property Management has for rent, or search every rental in the Wichita Falls MLS. As a Texas Residential Leasing Specialist, I'll help you understand what landlords look for, so you can apply with confidence.</p>
+      <div class="badge-line">
+        <span>Texas Residential Leasing Specialist (TRLS)</span>
+        <span>Property manager · WPM</span>
+      </div>
+      <div class="btn-row">
+        <a class="btn" href="#search">Search rentals</a>
+        <a class="btn btn-ghost" href="#apply">What you'll need to apply</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="search" style="padding-top:40px">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Available now · Wortham Property Management</p>
+        <h2>Homes we manage that are for rent</h2>
+        <p class="muted">Pulled live from our AppFolio listings. Click any home to see photos, details and the online application.</p>
+      </div>
+
+      <!-- APPFOLIO LISTINGS: live feed of WPM vacancies. listing.js writes an iframe right here.
+           themeColor matches the site red. Shows only on a real web host (or the local preview), not inside the Claude preview link. -->
+      <div class="appfolio-embed" id="wpm-listings">
+        <script src="https://worthampm.appfolio.com/javascripts/listing.js"></script>
+        <script>
+          if (window.Appfolio) {
+            Appfolio.Listing({
+              hostUrl: "worthampm.appfolio.com",
+              themeColor: "#CC1B1B",
+              height: "auto",
+              width: "100%",
+              defaultOrder: "date_posted"
+            });
+          } else {
+            // AppFolio script didn't load (blocked or offline): show a link instead of an empty box.
+            document.write('<div class="idx-slot" style="border:0"><h3>See every home Wortham PM has for rent</h3><p>Current vacancies, photos and the online application.</p><a class="btn" href="https://worthampm.appfolio.com/listings">View available rentals</a></div>');
+          }
+        </script>
+        <noscript><a data-link="availability" href="https://worthampm.appfolio.com/listings">See available Wortham PM rentals</a></noscript>
+      </div>
+      <p class="fineprint" style="margin-top:14px">Listings not loading? <a href="https://worthampm.appfolio.com/listings">Open them on AppFolio</a>.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="mls-rentals">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Every rental in the MLS</p>
+        <h2>Search all Wichita Falls rentals</h2>
+        <p class="muted">Every for-lease listing from the Wichita Falls MLS, from every brokerage, not just ours.</p>
+      </div>
+
+      <!-- MLS rental search: opens results on the team's BoomTown IDX site (WFAR Paragon feed). -->
+      <form class="mls-search" id="idx-rentals" data-mls-form>
+        <input type="hidden" name="proptype" value="RN">
+        <div class="field"><label for="r-max">Max rent</label>
+          <select id="r-max" name="maxprice">
+            <option value="">Any</option><option value="900">$900</option><option value="1200">$1,200</option>
+            <option value="1500">$1,500</option><option value="1800">$1,800</option><option value="2200">$2,200</option>
+          </select>
+        </div>
+        <div class="field"><label for="r-beds">Bedrooms</label>
+          <select id="r-beds" name="minbeds">
+            <option value="">Any</option><option value="1">1+</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option>
+          </select>
+        </div>
+        <div class="field"><label for="r-baths">Bathrooms</label>
+          <select id="r-baths" name="minbaths">
+            <option value="">Any</option><option value="1">1+</option><option value="2">2+</option>
+          </select>
+        </div>
+        <div class="field"><label for="r-sort">Sort by</label>
+          <select id="r-sort" name="sort">
+            <option value="listprice_asc">Rent: low to high</option><option value="listprice_desc">Rent: high to low</option><option value="">Newest</option>
+          </select>
+        </div>
+        <button class="btn" type="submit">Search rentals</button>
+      </form>
+      <div class="quick-links">
+        <span class="label">Quick searches</span>
+        <a data-mls="proptype=RN&sort=listprice_asc" href="#">All rentals</a>
+        <a data-mls="proptype=RN&maxprice=1200&sort=listprice_asc" href="#">Under $1,200</a>
+        <a data-mls="proptype=RN&minbeds=3&sort=listprice_asc" href="#">3+ bedrooms</a>
+        <a data-mls="proptype=RN&minbeds=4&minbaths=2&sort=listprice_asc" href="#">4 bed / 2 bath+</a>
+      </div>
+      <p class="fineprint" style="margin-top:14px">Opens a live search of the Wichita Falls MLS in a new tab. Listing data © Wichita Falls Association of REALTORS®, deemed reliable but not guaranteed.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="apply">
+    <div class="wrap grid-2">
+      <div class="stack">
+        <p class="eyebrow">Before you apply</p>
+        <h2>Have these ready and you can apply in about 15 minutes.</h2>
+        <p class="muted">Most Wichita Falls landlords and managers check the same things. Having them ready helps you get the house before someone else does.</p>
+        <figure class="media" style="margin-top:12px"><img class="" src="https://images.unsplash.com/photo-1722487631997-cf1e0f92c2c4?w=900&q=70&auto=format&fit=crop" alt="Handing over the keys to a rental home" loading="lazy" decoding="async"></figure>
+      </div>
+      <ul class="checklist">
+        <li>Government-issued photo ID for every adult</li>
+        <li>Proof of income: recent pay stubs, an offer letter, or your LES if you're military</li>
+        <li>Monthly income of roughly 3× the rent (varies by landlord)</li>
+        <li>Previous landlord names and phone numbers for the last few years</li>
+        <li>Application fee for each adult 18 or older</li>
+        <li>Pet info: breed, weight, vaccination records and a photo</li>
+        <li>Money for the security deposit and first month's rent at move-in</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Renting tips</p>
+        <h2>What I wish every renter knew</h2>
+      </div>
+      <div class="grid-3">
+        <div class="feature"><h3>Tour before you pay</h3><p>Never send a deposit for a home you haven't seen or verified. Rental scams copy real listings. When in doubt, call the listing company directly.</p></div>
+        <div class="feature"><h3>Document move-in</h3><p>Take dated photos of every room, and turn in your move-in condition form. It protects your deposit when you move out.</p></div>
+        <div class="feature"><h3>Get renter's insurance</h3><p>The owner's policy doesn't cover your belongings. A renter's policy usually costs about as much as a streaming subscription.</p></div>
+        <div class="feature"><h3>Ask about utilities</h3><p>Ask what you'll be responsible for. Summer electric bills here can be a big part of your monthly cost.</p></div>
+        <div class="feature"><h3>Military? Ask about the clause</h3><p>Texas law lets service members end a lease early for PCS or deployment orders. Make sure you understand how it works before you sign.</p></div>
+        <div class="feature"><h3>Put requests in writing</h3><p>Submit repairs through the portal or in writing. It creates a record and starts the clock on the landlord's response.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap grid-2">
+      <div class="stack">
+        <p class="eyebrow">Texas tenant basics</p>
+        <h2>Know your rights</h2>
+        <p class="muted">A quick summary of Texas Property Code Chapter 92. This is general information, not legal advice. Your lease and the statute control.</p>
+      </div>
+      <div class="faq">
+        <details><summary>When do I get my security deposit back?</summary><p>The landlord must refund the deposit, or send an itemized list of deductions, within 30 days after you surrender the property. You must give a written forwarding address. Deductions can't be taken for normal wear and tear.</p></details>
+        <details><summary>What if something needs to be repaired?</summary><p>For conditions that materially affect health or safety, notify the landlord (in writing is best) while you're current on rent. The landlord must make a diligent effort to repair within a reasonable time. Texas has specific steps before a tenant can use remedies, so don't withhold rent on your own.</p></details>
+        <details><summary>Do the locks get changed between tenants?</summary><p>Yes. Security devices must be rekeyed within 7 days after each tenant turnover, and homes must have required locks, door viewers and working smoke alarms.</p></details>
+        <details><summary>Can I break my lease?</summary><p>Some situations are protected by statute, including certain military orders and family violence. Otherwise, early termination depends on your lease terms, so read that section before you sign.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Already renting with Wortham PM?</p>
+        <h2>Resident shortcuts</h2>
+      </div>
+      <div class="actions">
+        <a class="action" data-link="tenantPortal" href="#"><strong>Pay rent</strong><span>Online portal and autopay</span></a>
+        <a class="action" data-link="tenantPortal" href="#"><strong>Request a repair</strong><span>Submit with photos, 24/7</span></a>
+        <a class="action" data-link="availability" href="#"><strong>WPM availability</strong><span>Our current rentals</span></a>
+        <a class="action" href="contact.html"><strong>Contact me</strong><span>Questions about a rental</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/site.js"></script>
+</body>
+</html>

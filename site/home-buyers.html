@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Home Buyers — Bradley Wortham</title>
+<meta name="description" content="Homes for sale in Wichita Falls, TX, loan options including VA and FHA, and Texas down payment assistance programs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="buyers">
+<div id="site-header"></div>
+
+<main>
+  <section class="page-hero photo" style="--img:url('https://images.unsplash.com/photo-1709787627975-9cb37bbeca60?w=1800&q=70&auto=format&fit=crop')">
+    <div class="wrap stack">
+      <p class="eyebrow">For home buyers &amp; families</p>
+      <h1>Owning a home may be closer than you think.</h1>
+      <p class="lede">As a Realtor® with 940 Realty, LLC, I help families buy their first home and move up to the next one. Many renters could qualify to buy, sometimes with a monthly payment close to their rent. Here's what's for sale, how financing works, and the Texas programs that help with the down payment.</p>
+      <div class="btn-row">
+        <a class="btn" href="#search">Search homes for sale</a>
+        <a class="btn btn-ghost" href="#assistance">Down payment help</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="search" style="padding-top:40px">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Live listings</p>
+        <h2>Homes for sale around Wichita Falls</h2>
+      </div>
+      <!-- MLS home search: opens results on the team's BoomTown IDX site (WFAR Paragon feed). -->
+      <form class="mls-search" id="idx-sale" data-mls-form>
+        <div class="field"><label for="s-type">Type</label>
+          <select id="s-type" name="proptype">
+            <option value="SF">Single-family homes</option><option value="C">Condos</option>
+            <option value="M">Manufactured homes</option><option value="SF,C,M">All homes</option>
+          </select>
+        </div>
+        <div class="field"><label for="s-min">Min price</label>
+          <select id="s-min" name="minprice">
+            <option value="">No min</option><option value="100000">$100k</option><option value="150000">$150k</option>
+            <option value="200000">$200k</option><option value="300000">$300k</option><option value="400000">$400k</option>
+          </select>
+        </div>
+        <div class="field"><label for="s-max">Max price</label>
+          <select id="s-max" name="maxprice">
+            <option value="">No max</option><option value="150000">$150k</option><option value="200000">$200k</option>
+            <option value="250000">$250k</option><option value="300000">$300k</option><option value="400000">$400k</option><option value="600000">$600k</option>
+          </select>
+        </div>
+        <div class="field"><label for="s-beds">Bedrooms</label>
+          <select id="s-beds" name="minbeds">
+            <option value="">Any</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option><option value="5">5+</option>
+          </select>
+        </div>
+        <div class="field"><label for="s-baths">Bathrooms</label>
+          <select id="s-baths" name="minbaths">
+            <option value="">Any</option><option value="1">1+</option><option value="2">2+</option><option value="3">3+</option>
+          </select>
+        </div>
+        <button class="btn" type="submit">Search homes</button>
+        <input type="hidden" name="sort" value="listprice_asc">
+      </form>
+      <div class="quick-links">
+        <span class="label">Quick searches</span>
+        <a data-mls="proptype=SF&sort=listprice_asc" href="#">All homes for sale</a>
+        <a data-mls="proptype=SF&maxprice=200000&sort=listprice_asc" href="#">Under $200k</a>
+        <a data-mls="proptype=SF&minprice=200000&maxprice=300000&sort=listprice_asc" href="#">$200k–$300k</a>
+        <a data-mls="proptype=SF&minbeds=4&sort=listprice_asc" href="#">4+ bedrooms</a>
+      </div>
+      <p class="fineprint" style="margin-top:14px">Opens a live search of the Wichita Falls MLS in a new tab. Listing data © Wichita Falls Association of REALTORS®, deemed reliable but not guaranteed.</p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">How buying works</p>
+        <h2>From "just looking" to keys in hand</h2>
+      </div>
+      <ol class="process">
+        <li><h3>Talk budget</h3><p>We go over what you want and what you can comfortably afford each month.</p></li>
+        <li><h3>Get pre-approved</h3><p>A lender confirms your loan amount and checks whether you qualify for assistance.</p></li>
+        <li><h3>Tour homes</h3><p>I'll point out repair issues and red flags I've learned to spot as a property manager.</p></li>
+        <li><h3>Make an offer</h3><p>Priced from recent sales, with terms that protect you.</p></li>
+        <li><h3>Inspect &amp; appraise</h3><p>Option period, inspection, repair negotiations and appraisal.</p></li>
+        <li><h3>Close</h3><p>Final walkthrough, sign, and get your keys. Then file your homestead exemption.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Loan options</p>
+        <h2>You probably don't need 20% down.</h2>
+        <p class="muted">Most buyers here use one of these. A lender can tell you which ones you qualify for. I'm happy to introduce you to local lenders I trust.</p>
+      </div>
+      <figure class="media wide" style="margin-bottom:40px"><img class="" src="https://images.unsplash.com/photo-1758523671531-75bd8a19e63b?w=1600&q=70&auto=format&fit=crop" alt="Couple looking at a tablet among moving boxes in their new home" loading="lazy" decoding="async"></figure>
+      <div class="cards">
+        <div class="card"><p class="min">As little as 3% down</p><h3>Conventional</h3><p>Best for buyers with solid credit. Mortgage insurance can be removed once you reach 20% equity.</p></div>
+        <div class="card"><p class="min">3.5% down</p><h3>FHA</h3><p>More flexible on credit scores and debt-to-income. Popular with first-time buyers and pairs well with down payment assistance.</p></div>
+        <div class="card"><p class="min">0% down</p><h3>VA</h3><p>For eligible veterans, active-duty service members (including Sheppard AFB) and some surviving spouses. No monthly mortgage insurance.</p></div>
+        <div class="card"><p class="min">0% down</p><h3>USDA</h3><p>For moderate-income buyers in eligible rural areas. Some communities outside Wichita Falls city limits may qualify, so check the address on USDA's eligibility map.</p></div>
+        <div class="card"><p class="min">Texas veterans</p><h3>Texas Veterans Land Board</h3><p>State home loan program for Texas veterans and military members, used together with a participating lender.</p></div>
+        <div class="card"><p class="min">Tax credit</p><h3>Mortgage Credit Certificate</h3><p>Turns part of your mortgage interest into a federal tax credit (up to $2,000 a year) for as long as you live in the home. Available through Texas state housing programs.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="assistance">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Down payment assistance</p>
+        <h2>Texas programs that help with down payment &amp; closing costs</h2>
+        <p class="muted">These programs have income and purchase-price limits, and their terms change. Confirm current details with a participating lender before you count on them.</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <p class="min">TDHCA · first-time buyers</p>
+          <h3>My First Texas Home</h3>
+          <p>Texas Department of Housing and Community Affairs program: a 30-year fixed mortgage plus down payment and closing-cost assistance.</p>
+          <ul><li>Generally for buyers who haven't owned a home in 3 years (veterans may be exempt)</li><li>Income and price limits by county</li></ul>
+        </div>
+        <div class="card">
+          <p class="min">TDHCA · not limited to first-time buyers</p>
+          <h3>My Choice Texas Home</h3>
+          <p>A similar mortgage-plus-assistance package for buyers who have owned a home before.</p>
+          <ul><li>Income limits apply</li><li>Homebuyer education required</li></ul>
+        </div>
+        <div class="card">
+          <p class="min">TSAHC · teachers, first responders, veterans</p>
+          <h3>Homes for Texas Heroes</h3>
+          <p>Texas State Affordable Housing Corporation program for teachers, police, firefighters, EMS, corrections officers, nurses and allied health workers, and veterans.</p>
+          <ul><li>Assistance as a grant or a deferred forgivable loan</li><li>Income limits apply</li></ul>
+        </div>
+        <div class="card">
+          <p class="min">TSAHC · low-to-moderate income</p>
+          <h3>Home Sweet Texas</h3>
+          <p>Down payment assistance for low-to-moderate income buyers in any profession. You don't have to be a first-time buyer.</p>
+          <ul><li>Assistance as a grant or a deferred forgivable loan</li><li>Income limits apply</li></ul>
+        </div>
+      </div>
+      <!-- Add any City of Wichita Falls or local lender assistance programs you work with here. -->
+      <p class="sample-note" style="margin-top:24px">Ask me about local programs and lender credits too. Some are only available through specific local lenders.</p>
+    </div>
+  </section>
+
+  <section class="section" id="payment">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="eyebrow">Buyer tools</p>
+        <h2>Monthly payment estimator</h2>
+        <p class="muted">See what a home would cost each month and compare it with your rent. Sample numbers are filled in to start.</p>
+      </div>
+      <div class="calc">
+        <form class="calc-inputs" id="pay-form" onsubmit="return false">
+          <div class="field"><label for="p-price">Home price ($)</label><input id="p-price" type="number" value="185000" min="0" step="1000"></div>
+          <div class="field"><label for="p-down">Down payment (%)</label><input id="p-down" type="number" value="3.5" min="0" max="100" step="0.5"></div>
+          <div class="field"><label for="p-rate">Interest rate (%)</label><input id="p-rate" type="number" value="6.5" min="0" step="0.125"></div>
+          <div class="field"><label for="p-term">Loan term (years)</label>
+            <select id="p-term"><option value="30" selected>30</option><option value="20">20</option><option value="15">15</option></select>
+          </div>
+          <div class="field"><label for="p-tax">Property tax rate (%)</label><input id="p-tax" type="number" value="2.2" min="0" step="0.05"></div>
+          <div class="field"><label for="p-ins">Home insurance ($/yr)</label><input id="p-ins" type="number" value="2400" min="0" step="100"></div>
+          <div class="field"><label for="p-hoa">HOA ($/mo)</label><input id="p-hoa" type="number" value="0" min="0" step="10"></div>
+          <div class="field"><label for="p-rent">Your current rent ($/mo)</label><input id="p-rent" type="number" value="1500" min="0" step="25"></div>
+        </form>
+        <div class="calc-out" aria-live="polite">
+          <div>
+            <p class="label">Estimated monthly payment</p>
+            <p class="big-num" id="p-total">$0</p>
+          </div>
+          <dl class="kv">
+            <div><dt>Principal &amp; interest</dt><dd id="p-pi">$0</dd></div>
+            <div><dt>Property tax</dt><dd id="p-taxmo">$0</dd></div>
+            <div><dt>Insurance</dt><dd id="p-insmo">$0</dd></div>
+            <div><dt>Down payment</dt><dd id="p-downamt">$0</dd></div>
+            <div><dt>Compared with your rent</dt><dd id="p-vs">$0</dd></div>
+          </dl>
+          <p class="fineprint">Estimate only. Doesn't include mortgage insurance (PMI/MIP) or VA/FHA funding fees. The tax rate varies by address, and a homestead exemption lowers it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" id="selling">
+    <div class="wrap grid-2">
+      <div class="stack">
+        <p class="eyebrow">Selling?</p>
+        <h2>Sell it, or rent it out? I can price it both ways.</h2>
+        <p class="muted">If you're moving, including on PCS orders, I'll put a sale estimate next to a rent estimate so you can compare. If you keep it, Wortham PM can manage it for you.</p>
+        <a class="btn" href="contact.html" style="align-self:flex-start">Get a home valuation</a>
+        <figure class="media" style="margin-top:12px"><img class="" src="https://images.unsplash.com/photo-1628624747186-a941c476b7ef?w=900&q=70&auto=format&fit=crop" alt="Two-story brick home with a front lawn" loading="lazy" decoding="async"></figure>
+      </div>
+      <ul class="checklist">
+        <li>Comparative market analysis with a recommended list price</li>
+        <li>Walkthrough prep advice on which repairs are worth making</li>
+        <li>Professional photos, MLS and online marketing</li>
+        <li>Weekly showing feedback</li>
+        <li>Offer review, negotiation and coordination through closing</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/site.js"></script>
+<script>
+(function () {
+  const $ = id => document.getElementById(id);
+  const n = id => parseFloat($(id).value) || 0;
+  const usd = v => (v < 0 ? "−$" : "$") + Math.abs(Math.round(v)).toLocaleString("en-US");
+
+  function calc() {
+    const price = n("p-price"), down = price * n("p-down") / 100, loan = price - down;
+    const r = n("p-rate") / 100 / 12, months = n("p-term") * 12;
+    const pi = loan <= 0 ? 0 : r === 0 ? loan / months : loan * r / (1 - Math.pow(1 + r, -months));
+    const tax = price * n("p-tax") / 100 / 12, ins = n("p-ins") / 12;
+    const total = pi + tax + ins + n("p-hoa");
+    const diff = total - n("p-rent");
+
+    $("p-total").textContent = usd(total);
+    $("p-pi").textContent = usd(pi);
+    $("p-taxmo").textContent = usd(tax);
+    $("p-insmo").textContent = usd(ins);
+    $("p-downamt").textContent = usd(down);
+    $("p-vs").textContent = (diff > 0 ? "+" : "") + usd(diff) + "/mo";
+  }
+  $("pay-form").addEventListener("input", calc);
+  calc();
+})();
+</script>
+</body>
+</html>

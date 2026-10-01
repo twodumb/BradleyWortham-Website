@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Contact — Bradley Wortham</title>
+<meta name="description" content="Get in touch about property management, rentals, or buying and selling a home.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="contact">
+<div id="site-header"></div>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap stack">
+      <p class="eyebrow">Contact</p>
+      <h1>Let's talk. Buying, renting or investing.</h1>
+      <p class="lede">Tell me a little about what you're looking for, and I'll get back to you within one business day.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:40px">
+    <div class="wrap grid-2">
+      <!-- Netlify Forms: submissions appear in Netlify under Forms > "contact". Turn on email notifications there.
+           (To preview without Netlify, add data-demo back to the form tag.) -->
+      <form class="form" name="contact" method="POST" action="thank-you.html" data-netlify="true" netlify-honeypot="company">
+        <input type="hidden" name="form-name" value="contact">
+        <p hidden><label>Leave this empty: <input name="company"></label></p>
+        <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+        <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+        <div class="field full"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+        <div class="field full"><label for="f-topic">I'm interested in</label>
+          <select id="f-topic" name="topic">
+            <option>Buying an investment property</option>
+            <option>Property management for my rental</option>
+            <option>Finding a rental</option>
+            <option>Buying a home</option>
+            <option>Down payment assistance / loan options</option>
+            <option>Selling a home</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field full"><label for="f-address">Property address (optional)</label><input id="f-address" name="address" autocomplete="street-address"></div>
+        <div class="field full"><label for="f-msg">Message</label><textarea id="f-msg" name="message" rows="5"></textarea></div>
+        <div class="full btn-row" style="align-items:center"><button class="btn" type="submit">Send message</button></div>
+        <p class="form-note full" aria-live="polite"></p>
+      </form>
+
+      <aside class="contact-card">
+        <div><p class="label">Phone</p><p class="mono" style="font-size:1.2rem" data-site="phone">(940) 500-2199</p></div>
+        <div data-hide-empty="email"><p class="label">Email</p><p><a data-site="email" data-mailto="email" href="#"></a></p><p data-hide-empty="email2"><a data-site="email2" data-mailto="email2" href="#"></a></p></div>
+        <div><p class="label">Office hours</p><p data-site="officeHours">Mon–Fri, 9am–5pm</p></div>
+        <div><p class="label">Service area</p><p data-site="region">Wichita Falls &amp; the surrounding area</p></div>
+        <div><p class="label">Real estate brokerage</p><p>940 Realty, LLC · TREC #9009568<br>3606 Grant St., Wichita Falls, TX 76308<br>Sales agent license TREC #809779</p></div>
+        <div><p class="label">Property management</p><p><a data-link="companyUrl" href="https://www.worthampm.com/">Wortham Property Management</a></p></div>
+        <p class="fineprint">Wortham PM residents: please submit maintenance requests through the <a data-link="tenantPortal" href="#">resident portal</a> so they're tracked and dispatched faster.</p>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/site.js"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Blog — Bradley Wortham</title>
+<meta name="description" content="Notes on rental investing, property management and renting.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body data-page="blog">
+<div id="site-header"></div>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap stack">
+      <p class="eyebrow">Blog</p>
+      <h1>Notes for landlords, investors &amp; renters</h1>
+      <p class="lede">Practical write-ups on the local rental market, running rental property well, and the questions I get asked most.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:40px">
+    <div class="wrap">
+      <div class="filters" role="group" aria-label="Filter posts by topic">
+        <button type="button" aria-pressed="true" data-filter="all">All</button>
+        <button type="button" aria-pressed="false" data-filter="Local">Local</button>
+        <button type="button" aria-pressed="false" data-filter="Investing">Investing</button>
+        <button type="button" aria-pressed="false" data-filter="Landlords">Landlords</button>
+        <button type="button" aria-pressed="false" data-filter="Renters">Renters</button>
+        <button type="button" aria-pressed="false" data-filter="Buyers">Buyers</button>
+      </div>
+
+      <!-- ============================================================
+           TO LIST A NEW POST: copy this block and paste it right below <div class="posts" id="posts">
+           (newest post goes first), then edit the parts in CAPS.
+
+        <a class="post-row" href="blog/FILE-NAME.html" data-tag="TOPIC">
+          <img class="thumb" src="assets/PHOTO.jpg" alt="" loading="lazy">
+          <time datetime="2026-10-01">OCT 1, 2026</time>
+          <div><h3>POST TITLE</h3><p>ONE-SENTENCE SUMMARY.</p></div>
+          <span class="tag">TOPIC</span>
+        </a>
+
+           TOPIC must match a filter button: Local (Wichita Falls news), Investing, Landlords, Renters or Buyers.
+           No photo? Delete the <img ...> line.
+           To show it on the home page too, paste the same block into index.html under "Latest writing"
+           (the home page shows your 1–2 newest posts; delete the oldest one there).
+           ============================================================ -->
+      <div class="posts" id="posts">
+        <a class="post-row" href="blog/first-rental-checklist.html" data-tag="Investing">
+          <img class="thumb" src="https://images.unsplash.com/photo-1628624747271-4df6ca1e1ba3?w=400&q=70&auto=format&fit=crop" alt="" loading="lazy" decoding="async">
+          <time datetime="2026-09-15">Sep 15, 2026</time>
+          <div><h3>Before you buy your first rental: a 12-point checklist</h3><p>What to check before you make an offer: rent comps, insurance, HOA rental rules and more.</p></div>
+          <span class="tag">Investing</span>
+        </a>
+        <a class="post-row" href="blog/make-ready-checklist.html" data-tag="Landlords">
+          <img class="thumb" src="https://images.unsplash.com/photo-1599619585752-c3edb42a414c?w=400&q=70&auto=format&fit=crop" alt="" loading="lazy" decoding="async">
+          <time datetime="2026-08-18">Aug 18, 2026</time>
+          <div><h3>The make-ready checklist: turning a rental between tenants</h3><p>What to check, what Texas requires, and how to get a vacant rental back on the market fast.</p></div>
+          <span class="tag">Landlords</span>
+        </a>        <a class="post-row" href="blog/texas-rental-repair-requests.html" data-tag="Renters">
+          <img class="thumb" src="https://images.unsplash.com/photo-1618832515490-e181c4794a45?w=400&q=70&auto=format&fit=crop" alt="" loading="lazy" decoding="async">
+          <time datetime="2026-07-21">Jul 21, 2026</time>
+          <div><h3>Asking for repairs in a Texas rental: how to make sure it gets fixed</h3><p>Who to notify, why being current on rent matters, the 7-day rule of thumb, and why you shouldn't stop paying rent.</p></div>
+          <span class="tag">Renters</span>
+        </a>        <a class="post-row" href="blog/va-loan-sheppard-afb.html" data-tag="Buyers">
+          <img class="thumb" src="https://images.unsplash.com/photo-1758523671893-0ba21cf4260f?w=400&q=70&auto=format&fit=crop" alt="" loading="lazy" decoding="async">
+          <time datetime="2026-06-16">Jun 16, 2026</time>
+          <div><h3>Buying near Sheppard AFB with a VA loan: what to know first</h3><p>Zero down, no monthly mortgage insurance, and a plan for your next PCS.</p></div>
+          <span class="tag">Buyers</span>
+        </a>        <a class="post-row" href="blog/self-managing-vs-property-manager.html" data-tag="Landlords">
+          <img class="thumb" src="https://images.unsplash.com/photo-1722487631997-cf1e0f92c2c4?w=400&q=70&auto=format&fit=crop" alt="" loading="lazy" decoding="async">
+          <time datetime="2026-05-12">May 12, 2026</time>
+          <div><h3>Self-managing vs. hiring a property manager: an honest comparison</h3><p>What your time is worth, where DIY landlords lose money, and when self-managing makes sense.</p></div>
+          <span class="tag">Landlords</span>
+        </a>        <a class="post-row" href="blog/security-deposits-texas.html" data-tag="Renters">
+          <img class="thumb" src="https://images.unsplash.com/photo-1554995207-c18c203602cb?w=400&q=70&auto=format&fit=crop" alt="" loading="lazy" decoding="async">
+          <time datetime="2026-04-14">Apr 14, 2026</time>
+          <div><h3>How security deposits get returned in Texas</h3><p>Normal wear and tear vs. damage, the 30-day rule, and why your forwarding address matters.</p></div>
+          <span class="tag">Renters</span>
+        </a>      </div>
+      <p class="posts-empty muted" id="posts-empty" hidden>No posts in this topic yet. Check back soon.</p>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+<script src="assets/site.js"></script>
+<script>
+  const btns = document.querySelectorAll(".filters button");
+  btns.forEach(b => b.addEventListener("click", () => {
+    btns.forEach(x => x.setAttribute("aria-pressed", x === b));
+    const f = b.dataset.filter;
+    let shown = 0;
+    document.querySelectorAll("#posts .post-row").forEach(p => { p.hidden = f !== "all" && p.dataset.tag !== f; if (!p.hidden) shown++; });
+    document.getElementById("posts-empty").hidden = shown > 0;
+  }));
+</script>
+</body>
+</html>
